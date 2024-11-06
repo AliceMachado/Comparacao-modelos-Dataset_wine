@@ -1,0 +1,73 @@
+1) Quais foram os valores das métricas (acurácia, precision, recall, f1-score) para cada modelo?
+#Árvore de Decisão:
+Acurácia: 0.96
+Matriz de Confusão:
+ [[18  1  0]
+ [ 0 21  0]
+ [ 1  0 13]]
+Relatório de Classificação:
+               precision    recall  f1-score   support
+
+           0       0.95      0.95      0.95        19
+           1       0.95      1.00      0.98        21
+           2       1.00      0.93      0.96        14
+
+    accuracy                           0.96        54
+   macro avg       0.97      0.96      0.96        54
+weighted avg       0.96      0.96      0.96        54
+
+#Random Forest: 
+Acurácia: 1.0
+Matriz de Confusão:
+ [[19  0  0]
+ [ 0 21  0]
+ [ 0  0 14]]
+Relatório de Classificação:
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00        19
+           1       1.00      1.00      1.00        21
+           2       1.00      1.00      1.00        14
+
+    accuracy                           1.00        54
+   macro avg       1.00      1.00      1.00        54
+weighted avg       1.00      1.00      1.00        54
+
+#KNN:
+Acurácia: 0.96
+Matriz de Confusão:
+ [[19  0  0]
+ [ 1 19  1]
+ [ 0  0 14]]
+Relatório de Classificação:
+               precision    recall  f1-score   support
+
+           0       0.95      1.00      0.97        19
+           1       1.00      0.90      0.95        21
+           2       0.93      1.00      0.97        14
+
+    accuracy                           0.96        54
+   macro avg       0.96      0.97      0.96        54
+weighted avg       0.97      0.96      0.96        54
+
+2) Qual modelo se destacou em termos de acurácia?
+O modelo Random Forest se destacou em termos de acurácia, com uma precisão perfeita de 1.00.
+
+3) Explique qual métrica foi mais relevante para decidir qual modelo teve o melhor desempenho e por quê.
+A acurácia foi a métrica mais relevante, pois reflete a proporção de previsões corretas em relação ao total de casos. Para este conjunto de dados de classificação de vinhos, a acurácia é crucial para garantir que a maioria das previsões esteja correta. No entanto, outras métricas como precisão, recall e f1-score também são importantes para avaliar o desempenho geral do modelo e identificar como ele lida com diferentes classes de dados.
+
+4) Se houver algum modelo que teve uma performance significativamente diferente dos outros, explique o motivo provável para esse comportamento.
+O modelo Random Forest teve uma performance significativamente melhor que os outros modelos, com acurácia de 1.00. Esse desempenho superior é provavelmente devido à sua capacidade de combinar múltiplas árvores de decisão, o que aumenta a robustez e reduz o risco de overfitting. A Random Forest agrega resultados de várias árvores (bagging), o que ajuda a capturar uma maior variedade de padrões e relações nos dados, tornando-a extremamente eficaz para este conjunto de dados.
+
+5) Qual modelo apresentou o melhor desempenho para esse conjunto de dados?
+O modelo Random Forest apresentou o melhor desempenho para o conjunto de dados "Wine".
+
+6) Por que você acredita que este modelo foi o mais eficaz para a classificação de vinhos?
+A Random Forest foi o mais eficaz devido à sua abordagem de combinar os resultados de múltiplas árvores de decisão, o que melhora significativamente a precisão e a robustez do modelo. Além disso, a capacidade da Random Forest de lidar bem com dados variados e complexos contribui para seu desempenho superior. Esta combinação de características torna o Random Forest particularmente adequado para a classificação de vinhos, onde diferentes atributos e variáveis podem influenciar os resultados.
+
+7) Quais características dos dados podem ter influenciado o desempenho dos modelos?
+> Variância dos Atributos: A presença de diferentes características químicas no vinho, como acidez, álcool, e fenóis, pode influenciar o desempenho dos modelos. A Random Forest é capaz de capturar essa variabilidade de maneira eficaz.
+
+> Distribuição das Classes: A distribuição bem definida das três classes de vinhos ajuda a Random Forest a criar divisões precisas entre as classes.
+
+> Complexidade e Diversidade dos Dados: A capacidade da Random Forest de manejar a complexidade dos dados, incluindo a interação entre variáveis e a presença de outliers, a torna particularmente eficaz para este conjunto de dados.
