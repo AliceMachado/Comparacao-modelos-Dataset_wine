@@ -1,4 +1,4 @@
-# Comparacao-modelos-Dataset_wine
+# Comparacao-modelos-Dataset_wine / Para melhor visualização, utilize o modo 'Code' do arquivo README!
 
 Exercício de Classificação de Vinhos com o Conjunto de Dados "Wine"
 
